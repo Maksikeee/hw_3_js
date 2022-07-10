@@ -1,82 +1,183 @@
-//Задание 2
-console.log('Задание 2');
-let a1 = 5 % 3,
-	 a2 = 3 % 5,
-	 a3 = 5 + '3',
-	 a4 = '5' - 3,
-	 a5 = 75 + 'кг',
-	 a6 = 785 * 653,
-	 a7 = 100 / 25,
-	 a8 = 0 * 0,
-	 a9 = 0 / 2,
-	 a10 = 89 / 0,
-	 a11 = 98 + 2,
-	 a12 = 5 - 98,
-	 a13 = (8 + 56 * 4) / 5,
-	 a14 = (9 - 12) * 7 / (5 + 2),
-	 a15 = +"123",
-	 a16 = 1 || 0,
-	 a17 = false || true,
-	 a18 = true > 0;
+// Задание 1
+let name = prompt('ваше имя');
+	 age = prompt('возраст');
+	 city = prompt('город проживания');
+	 phone = prompt('телефон');
+	 email = prompt('почта');
+	 company = prompt('место работы');
+console.log(`Меня зовут ${name}. Мне ${age} лет. Я проживаю в городе ${city} и работаю в компании ${company}. Мои контактные данные: ${phone}, ${email}.`);
 
-console.log(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
-console.log('------------------------------');
+//Задание 2
+let bday = 2022 - age;
+console.log(`${name} родился в ${bday} году.`);
 
 //Задание 3
-console.log('Задание 3');
-let width = 10,
-	 heigth = 23,
-	 SPryam = width * heigth;
-console.log(SPryam);
-console.log('------------------------------');
+let str = prompt('Введите строку из 6-ти цифр');
+	 str1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+	 str2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+str1 == str2 ? alert('Да') : alert('Нет');
 
 //Задание 4
-console.log('Задание 4');
-let VCilindra = Math.PI * Math.pow(a7, 2);
-console.log(VCilindra);
-console.log('------------------------------');
+let a = prompt('Введите число');
+a > 0 ? alert('Верно') : alert('Неверно');
 
 //Задание 5
-console.log('Задание 5');
-let r = 5,
-	 VKruga = Math.PI * Math.pow(r, 2);
-console.log(VKruga);
-console.log('------------------------------');
+a = 10;
+let b = 2;
+
+if(a + b > 1) {
+	alert(`Сумма: ${a + b}, разность: ${a - b}, произведение: ${a * b}, частное: ${a / b}, квадрат: ${Math.pow(a + b, 2)}.`);
+} else {
+	alert(`Сумма: ${a + b}, разность: ${a - b}, произведение: ${a * b}, частное: ${a / b}.`);
+}
 
 //Задание 6
-console.log('Задание 6');
-let a = 5,
-	 b = 7,
-	 h = 10,
-	 STrap = (a + b) / 2 * h;
-console.log(STrap);
-console.log('------------------------------');
+if(a > 2 && a < 11 || b >= 6 && b < 14) {
+	alert('Верно');
+} else {
+	alert('Неверно');
+}
 
 //Задание 7
-console.log('Задание 7');
-let years = 5,
-	 p = 10,
-	 S = 2000000,
-	 ezhMesStavka = p / 12 / 100;
-	 obshStavka = Math.pow((1 + ezhMesStavka), (years * 12));
-	 ezhMesPlatezh = (S * ezhMesStavka * obshStavka) / (obshStavka - 1);
-	 Pereplata = ezhMesPlatezh * years * 12 - S;
-console.log(Pereplata);
-console.log('------------------------------');
+let n = prompt('Введите число от 0 до 59');
+
+switch(true) {
+	case n >= 0 && n <=14 :
+		alert('Первая четверть часа');
+		break;
+
+	case n >= 15 && n <=29 :
+		alert('Вторая четверть часа');
+		break;
+
+	case n >= 30 && n <=44 :
+		alert('Третья четверть часа');
+		break;
+
+	case n >= 45 && n <=59 :
+		alert('Четвертая четверть часа');
+		break;
+
+	default:
+		alert('Неверное значение.');
+}
 
 //Задание 8
-console.log('Задание 8');
-let aa = 8,
-	 bb = 3;
-	 x = (16 - aa) / 2 + bb;
-console.log(x);
+let day = prompt('Введите число от 1 до 31');
 
-let z = (15 * bb - a) / (6 - bb);
-console.log(z);
+switch(true) {
 
-let y = 23780 / (3 + aa + bb);
-console.log(y);
-console.log('------------------------------');
+	case day >=1 && day <= 10 :
+		alert('Первая декада месяца');
+		break;
+
+	case day >=11 && day <= 20 :
+		alert('Вторая декада месяца');
+		break;
+
+	case day >=21 && day <= 31 :
+		alert('Третья декада месяца');
+		break;
+
+	default :
+		alert('Неверное число');
+}
+
+//Задание 9
+let days = prompt('Введите число');
+	 year = days / 365;
+	 month = days % 365 / 31;
+	 week = days % 365 % 31 / 7;
+	 day = days % 365 % 31 % 7;
+	 hour = days % 1 *24;
+	 minutes = hour % 1 * 60;
+	 seconds = minutes % 1 * 60;
+
+
+
+
+switch(true) {
+
+	case days < 0 :
+		console.log('Неверное значение.')
+		break;
+
+	case true :
+		switch(true){
+			case year >= 0 && year < 1 :
+				console.log('Меньше года');
+				break;
+			case year >= 1 :
+				console.log(`${Math.trunc(year)} year`);
+				break;
+		}
+
+	case true :
+		switch(true) {
+			case month >= 0 && month < 1 :
+				console.log('Меньше месяца');
+				break;
+			case month >= 1 :
+				console.log(`${Math.trunc(month)} month`);
+				break;
+		}
+
+	case true :
+		switch(true) {
+			case week >= 0 && week < 1 :
+				console.log('Меньше недели');
+				break;
+			case week >= 1 :
+				console.log(`${Math.trunc(week)} week`);
+				break;
+		}
+
+	case day >= 1 :
+		console.log(`${Math.trunc(day)} day, ${Math.trunc(minutes)} minutes, ${Math.trunc(seconds)} seconds.`);
+		break;
+
+}
+
+//Задание 10
+
+let month1 = Math.ceil(days % 365 / 31);
+
+switch(true) {
+	case month1 >= 3 && month1 <= 5 :
+		console.log(`${month1} месяц года Весна`);
+		break;
+
+	case month1 >= 6 && month1 <= 8 :
+		console.log(`${month1} месяц года Лето`);
+		break;
+
+	case month1 >= 9 && month1 <= 11 :
+		console.log(`${month1} месяц года Осень`);
+		break;
+
+	default :
+		console.log(`${month1} месяц года Зима`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
